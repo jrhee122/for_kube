@@ -8,7 +8,8 @@ spec:
     runAsUser: 260433 # run id command in terminal to get your UID
   containers:
     - name: example-container
-      image: ghcr.io/location/your_image_name:tag  # image name
+      image: ghcr.io/jrhee122/for_kube:main  # image name
+      imagePullPolicy: Always
       resources:
         requests: # minimum resources
           memory: "16Gi"
@@ -26,6 +27,4 @@ spec:
   - name: home
     nfs:
       server: 128.239.56.166
-      path: /sciclone/home/your_username/repos/your_repo_name
-  imagePullSecrets:
-  - name: ghcr-secret
+      path: /sciclone/home/jrhee01/in_class_test/for_kube
